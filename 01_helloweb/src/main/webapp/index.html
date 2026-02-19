@@ -6,5 +6,27 @@
 </head>
 <body>
 	<h1>Helloweb</h1>
+	
+	<h2>servlet</h2>
+	<!-- 
+		context
+		 - 에플리케이션이 동작하는 환경에 대한 개념
+		context-Path
+		 - 어플리케이션에 접근하기 위한 경로
+		
+		클라이언트에서 절대주소방식으로는 url작성시 반드시 contextPath
+		부터 작성해야 한다. 
+		
+		절대경로방식(/로 시작) : localhost:8081뒤에 내가 작성한
+		절대경로가 붙어지면서 요청이 들어간다.
+		상대경로방식(문구로 시작) : 현재 페이지가 보여질때 url경로 중
+		마지막 /로부터 그 뒤에 내가 작성한 상대경로값이 붙어지면서
+		요청이 들어간다.
+	 -->
+	<ul>
+		<li><a href="/hello/servlet/testPerson1.html">개취검사 - GET | POST</a></li>
+        <li><a href="/hello/servlet/testPerson2.html">개취검사 - jsp</a></li>
+        <li><a href="/hello/menu/menu.jsp">@실습문제 - menu</a></li>
+	</ul>
 </body>
 </html>
