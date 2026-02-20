@@ -43,7 +43,7 @@
 	 		<a href="/jsp/jsp/02_directive.jsp">페이지 지시어</a>
 	 	</li>
 	 	<li>
-	 		include 지시어 : jsp파일에 또다른 jsp파일을 포함시키고자 할 때 사용
+	 		include 지시어 : jsp파일에 또다른 jsp파일을 포함시키고자 할 때 사용 <br>
 	 		<a href="/jsp/jsp/03_include.jsp">include 지시어</a>
 	 	</li>
 	 	<li>
@@ -59,5 +59,24 @@
 	 
 	 <h3>1. EL기본 문법</h3>
 	 <a href="/jsp/el/el.do">01_EL</a>
+	 
+	 <h3>2. EL의 연산자</h3>
+	 <a href="/jsp/el/oper.do">02_EL의 연산자</a>
+	 
+	 <h1>JSP Action Tag</h1>
+	 <p>
+	 	XML기술을 이용하여 JSP문법을 확장시켜 새로운 기술을 제공하는
+	 	태그들 <br>
+	 	1. 표준 액션 태그 <br>
+	 	 - 별도의 설치 없이 JSP에서 바로 사용가능한 태그들 <br>
+	 	2. 커스텀 액션 태그 <br>
+	 	 - 별도의 추가 설치가 필요한 태그들로, 라이브러리 설치 후
+	 	   각 JSP에 taglib 지시어를 추가해야 한다. <br>
+	 	 - 종류별로 다양한 기능을 제공한다. <br>
+	 </p>
+	 
+	 <h3>1. 표준 액션 태그</h3>
+	 <a href="/jsp/action/standard/01_include.jsp">01_jsp:include</a> <br>
+	 <a href="/jsp/action/standard/02_forward.jsp">02_jsp:forward</a>
 </body>
 </html>
