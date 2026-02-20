@@ -22,6 +22,13 @@
 		상대경로방식(문구로 시작) : 현재 페이지가 보여질때 url경로 중
 		마지막 /로부터 그 뒤에 내가 작성한 상대경로값이 붙어지면서
 		요청이 들어간다.
+		
+		/hello -> context-Path
+		/hello/servlet or menu/... -> Servlet-Path
+		
+		/abc/login 으로 요청이 들어오면
+		abc요청을 처리할 수 있는 Context를 찾음
+		Context 내부에서 /login을 담당하는 Servlet을 찾아서 java코드를 실행.
 	 -->
 	<ul>
 		<li><a href="/hello/servlet/testPerson1.html">개취검사 - GET | POST</a></li>
