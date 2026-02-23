@@ -9,16 +9,16 @@
 <body>
 	<h1>JSP</h1>
 	<p>
-		JSP
-		 - HTML형식으로 자바코드를 기술할 수 있는 자바 언어로
-		   서블릿에서 응답화면을 구현했을 시 발생하는 복잡성을 줄이고 위해 탄생
-		   
-		 - Servlet은 백엔드 비지니스
+		JSP <br>
+		 - HTML형식으로 자바코드를 기술할 수 있는 자바언어로
+		   서블릿에서 응답화면을 구현했을시 발생하는 복잡성을 줄이기 위해 탄생 <br>
+		 - Servlet은 백엔드 비지니스 로직에 집중하고, jsp는 응답화면(VIEW)구현에
+		   집중할 수 있도록 역할을 분리했다.
 	</p>
-	 
-	 <hr>
-	 
-	 <h2>JSP Element 표현법</h2>
+	
+	<hr>
+	
+	<h2>JSP Element 표현법</h2>
 	 <h3>1. jsp 스크립팅 원소</h3>
 	 <ol>
 	 	<li>1. 선언문 : &lt;%! !&gt;</li>
@@ -77,6 +77,9 @@
 	 
 	 <h3>1. 표준 액션 태그</h3>
 	 <a href="/jsp/action/standard/01_include.jsp">01_jsp:include</a> <br>
-	 <a href="/jsp/action/standard/02_forward.jsp">02_jsp:forward</a>
+	<a href="/jsp/action/standard/02_forward.jsp">02_jsp:forward</a>
+	
+	<h1>2. 커스텀 액션 태그</h1>
+	<a href="/jsp/action/custom/jstl.jsp">JSTL</a>
 </body>
 </html>
