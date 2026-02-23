@@ -85,5 +85,61 @@
 	<h1>fetch함수를 이용한 AJAX</h1>
 	<button onclick="fetch1()">Fetch Get테스트</button>
 	<button onclick="fetch2()">Fetch Post테스트</button>
+	
+	<div id="target2"></div>
+	<script>
+		function fetch1(){
+			/*
+				fetch함수
+				 - es6에서 추가된 비동기 함수로, 간결한 문법으로 서버와 통신할 수 있다.
+				 - Promise기반으로 설계되어 있으며 비동기 요청 성공시, 실패시 처리를
+				   위한 메서드를 제공한다.
+				 - fetch함수는 비동기 요청을 보내면 Promise객체를 반환하고, 서버로부터
+				   데이터를 응답받기 전까지 다른 작업을 수행할 수 있다.
+
+				Promise
+				 - 비동기 작업의 처리결과를 나타내는 객체로 3가지 상태값을 가진다.
+				 1) pending : 비동기 작업을 처리중인 상태(초기값)
+				 2) resolved : 비동기 작업 처리 완료 상태(응답받은 상태)
+				 3) rejected : 비동기 작업 처리 실패 상태(응답 X)
+			*/
+			// fetch(url, [options])
+			//  - options : 요청에 대한 옵션(method, headers, body...)
+			fetch("/ajax/ajaxTest.do?id=admin")
+			.then(function(response){ // 요청 성공시 실행할 함수
+				console.log(response);
+				if(!(response.ok && response.status === 200)){
+					throw new Error('에러발생');
+				}
+
+				return response.text(); // text() 함수는 Promise를 반환
+			})
+			.then(function(text){
+				target2.innerHTML =  "<h3>Fetch GET : "+text+"</h3>";
+			})
+			.catch(function(error){ // Promise객체의 결과가 reject되는 경우 실행
+				console.log(error);
+			})
+			.finally(function(){ // 비동기 작업이 처리 완료되는 경우 항상 실행하는 함수
+				console.log("작업 완료");
+			})
+		}
+
+		function fetch2(){
+			fetch('/ajax/ajaxTest.do', {
+				method : 'post',
+				body : "id=user01&name=mkm",
+				headers : {
+					"Content-Type" : "application/x-www-form-urlencoded"
+				}
+			})
+			.then(function(response){
+				return response.text();
+			})
+			.then(function(text){
+				target2.innerHTML = `<h4>Fetch POST : \${text}</h4>`;
+			})
+		}
+	</script>
 </body>
 </html>
